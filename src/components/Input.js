@@ -22,7 +22,7 @@ export default function Input({label, type = 'text',  ...props}){
         <input
           type={inputType}
           className={classNames({
-            "px-2 outline-none text-xs  w-full h-[38px]" : true,
+            "px-2 outline-none text-xs bg-transparent w-full h-[38px]" : true,
             "pt-[10px]" : field.value
           })}
           {...field}
