@@ -77,6 +77,9 @@ import AuthLayout from "pages/auth";
 import Login from "pages/auth/Login";
 import Register from "pages/auth/Register";
 import Home from "pages/Home";
+import InboxLayout from "pages/inbox";
+import Chat from "pages/inbox/chat";
+import Inbox from "pages/inbox/inbox";
 import MainLayout from "pages/layout";
 import Logout from "pages/logout";
 import ProfileLayout from "pages/profile";
@@ -108,6 +111,20 @@ const routes = [
 					{
 						path: 'tagged',
 						element: <ProfileTagged />
+					}
+				]
+			},
+			{
+				path: 'inbox',
+				element: <InboxLayout />,
+				children: [
+					{
+						index: true,
+						element: <Inbox />
+					},
+					{
+						path: ':conversationId',
+						element: <Chat />
 					}
 				]
 			}
