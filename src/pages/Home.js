@@ -1,12 +1,13 @@
-import Header from "components/Header";
-
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      header
-    </>
+    <div>
+      <Helmet>
+        <title>Instagram</title>
+      </Helmet>
+      home page
+    </div>
 
   )
 }
